@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col mt-2">
+                <form class="row needs-validation border border-2 mt-5 rounded-1" novalidate method="GET">
+                  <div class="bg-light ps-4 pb-2 pt-3 border-bottom border-2">
+                      <h2>Payment form Example</h2>
+                  </div>
+                  
+                  <fieldset class="form-group px-4 mt-4">
+                    <div class="row">
+                      <div class="col">
+                        <div class="alert alert-danger alert-dismissible fade show rounded-1" role="alert">
+                          <strong>Some fields are missing</strong>
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="form-group px-4 mt-4">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <label for="card" class="form-label">Card #</label>
+                        <input type="text" class="form-control" id="card" name="card" placeholder="xxxxx xxxxx xxxxx xxxxx" pattern="\d*" maxlength="20" required>
+                        <div class="invalid-feedback">
+                          Ingrese solo valores numericos
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="cvc" class="form-label">CVC#</label>
+                        <input type="text" class="form-control" id="cvc" name="cvc" placeholder="0000" maxlength="3" required>
+                        <div class="invalid-feedback">
+                          Ingrese solo valores numericos
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount" required>
+                        <div class="invalid-feedback">
+                          Ingrese solo valores numericos
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="form-group px-4 mt-4">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="first-name" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Pedro" pattern="[A-Za-z]+" required>
+                        <div class="invalid-feedback">
+                          No use caracteres especiales ni numericos
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="last-name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="last-name" name="last-name" placeholder="Pérez" pattern="[A-Za-z]+" required>
+                        <div class="invalid-feedback">
+                          No use caracteres especiales ni numericos
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="form-group px-4 mt-4">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" name="city" pattern="[A-Za-z]+" required>
+                        <div class="invalid-feedback">
+                          Indique su cuidad
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="state" class="form-label">State</label>
+                        <select class="form-select" id="state" name="state" required>
+                          <option selected disabled value="">Pick a state</option>
+                          <option value="barcelona">Barcelona</option>
+                          <option value="madrid">Madrid</option>
+                        </select>                        
+                        <div class="invalid-feedback">seleccione uno</div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="postal-code" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="postal-code"  name="postal-code" pattern="\d*" maxlength="5" required>
+                        <div class="invalid-feedback">indique codigo postal usando numeros</div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+
+                  <fieldset class="form-group px-4 mt-4">
+                      <div class="row">
+                          <div class="col-6">
+                              <p>we accept</p>
+                              <div class="col-6 bg-secondary text-center rounded-1 ps-2 py-2">
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="target1" required>
+                                      <label class="form-check-label" for="inlineRadio1" title="target1"><i class="bi bi-credit-card-fill text-light"></i></label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="target2" required>
+                                      <label class="form-check-label" for="inlineRadio2" title="target2"><i class="bi bi-credit-card-fill text-light"></i></label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="target3" required>
+                                      <label class="form-check-label" for="inlineRadio3" title="target3"><i class="bi bi-credit-card-fill text-light"></i></label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="target4" required>
+                                      <label class="form-check-label" for="inlineRadio4" title="target4"><i class="bi bi-credit-card-fill text-light"></i></label>
+                                  </div>
+                              </div>     
+                          </div>
+                          <div class="col-6">
+                              <label class="form-label" for="message">Message</label>
+                              <textarea class="form-control" name="message" id="message" rows="5"></textarea>
+                          </div>
+                      </div>
+                  </fieldset>
+
+                  <fieldset class="form-group px-5 py-3 mt-5 border-top border-2 bg-light">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button class="btn btn-secondary" type="reset" onclick="location.reload()">Cancel</button>
+                                <button class="btn btn-primary me-md-2" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                  </fieldset>
+                  
+              </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
+</html>
